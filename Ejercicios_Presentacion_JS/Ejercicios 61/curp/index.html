@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de CURP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            background-color: white;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #023e8a;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-left: 5px solid #0077b6;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Generador de CURP</h2>
+
+    <label for="nombre">Nombre(s):</label>
+    <input type="text" id="nombre" placeholder="Ejemplo: Juan Carlos">
+
+    <label for="paterno">Apellido paterno:</label>
+    <input type="text" id="paterno" placeholder="Ejemplo: Hernández">
+
+    <label for="materno">Apellido materno:</label>
+    <input type="text" id="materno" placeholder="Ejemplo: López">
+
+    <label for="fecha">Fecha de nacimiento:</label>
+    <input type="date" id="fecha">
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo">
+        <option value="">Selecciona</option>
+        <option value="H">Hombre</option>
+        <option value="M">Mujer</option>
+    </select>
+
+    <label for="estado">Entidad federativa:</label>
+    <select id="estado">
+        <option value="">Selecciona</option>
+        <option value="AS">Aguascalientes</option>
+        <option value="BC">Baja California</option>
+        <option value="BS">Baja California Sur</option>
+        <option value="CC">Campeche</option>
+        <option value="CS">Chiapas</option>
+        <option value="CH">Chihuahua</option>
+        <option value="CL">Coahuila</option>
+        <option value="CM">Colima</option>
+        <option value="DF">Ciudad de México</option>
+        <option value="DG">Durango</option>
+        <option value="GT">Guanajuato</option>
+        <option value="GR">Guerrero</option>
+        <option value="HG">Hidalgo</option>
+        <option value="JC">Jalisco</option>
+        <option value="MC">Estado de México</option>
+        <option value="MN">Michoacán</option>
+        <option value="MS">Morelos</option>
+        <option value="NT">Nayarit</option>
+        <option value="NL">Nuevo León</option>
+        <option value="OC">Oaxaca</option>
+        <option value="PL">Puebla</option>
+        <option value="QT">Querétaro</option>
+        <option value="QR">Quintana Roo</option>
+        <option value="SP">San Luis Potosí</option>
+        <option value="SL">Sinaloa</option>
+        <option value="SR">Sonora</option>
+        <option value="TC">Tabasco</option>
+        <option value="TS">Tamaulipas</option>
+        <option value="TL">Tlaxcala</option>
+        <option value="VZ">Veracruz</option>
+        <option value="YN">Yucatán</option>
+        <option value="ZS">Zacatecas</option>
+        <option value="NE">Nacido en el extranjero</option>
+    </select>
+
+    <button id="generar">Generar CURP</button>
+
+    <div class="resultado" id="resultado"></div>
+</div>
+
+<script src="app.js"> </script>
+
+</body>
+</html>
